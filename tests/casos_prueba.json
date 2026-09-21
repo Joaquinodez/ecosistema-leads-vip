@@ -1,5 +1,5 @@
 {
-  "descripcion": "Prueba de estres: 9 casos (minimo exigido: 5, incluyendo camino infeliz). Estado: OK = verificado; MOCK = verificado con datos fijados (pin data) en n8n; PENDIENTE = debe correrlo el usuario con datos reales.",
+  "descripcion": "Prueba de estres: 9 casos (minimo exigido: 5, incluyendo camino infeliz). Estado: OK = verificado; OK (datos fijados) = ejecutado en n8n con datos de entrada fijados (pin data).",
   "casos": [
     {
       "id": "T1",
@@ -30,15 +30,15 @@
       "nombre": "Aprobacion expirada (48 h)",
       "entrada": "Igual a T2, sin respuesta del aprobador",
       "esperado": "Salida Expirado, Decision_Humana = Expirado",
-      "estado": "PENDIENTE",
-      "evidencia": "Requiere esperar 48 h (o acortar horas_espera_aprobacion en Config). No verificado todavia."
+      "estado": "OK",
+      "evidencia": "Ejecucion 28 con la espera acortada temporalmente (0,03 h): el lead quedo con Decision_Humana=Expirado y Estado=Rechazado por falta de respuesta. El valor de produccion se restauro a 48 h."
     },
     {
       "id": "T5",
       "nombre": "Camino infeliz: datos faltantes (webhook sin email)",
       "entrada": "POST /webhook/nuevo-lead-vip sin campo email",
       "esperado": "Validacion falla, se registra en Errores, admin alertado, no se crea lead",
-      "estado": "MOCK",
+      "estado": "OK (datos fijados)",
       "evidencia": "Ejecucion 3"
     },
     {
@@ -46,7 +46,7 @@
       "nombre": "Correo irrelevante (factura/newsletter)",
       "entrada": "Correo que no es consulta comercial",
       "esperado": "Claude Haiku lo marca no relevante; se descarta sin crear lead",
-      "estado": "MOCK",
+      "estado": "OK (datos fijados)",
       "evidencia": "Ejecucion 5"
     },
     {
@@ -63,7 +63,7 @@
       "entrada": "Mismo email dos veces",
       "esperado": "Dedup por email en Airtable; no se crea segundo lead",
       "estado": "OK",
-      "evidencia": "Mismo email enviado dos veces por webhook (jjodezp+t8dup): una sola fila en Airtable; la segunda ejecucion termino en ~1 s por la rama de reingreso duplicado."
+      "evidencia": "Mismo email enviado dos veces por webhook: una sola fila en Airtable; la segunda ejecucion termino en ~1 s por la rama de reingreso duplicado."
     },
     {
       "id": "T9",
