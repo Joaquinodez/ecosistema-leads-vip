@@ -1,8 +1,49 @@
 # Ecosistema de Automatización IA Autónomo — NubeFlow Consulting
 
-Caso de uso: cada correo nuevo que llega al Gmail de la empresa es evaluado por Claude; si es una consulta comercial relevante, se guarda como lead en Airtable, se puntúa (VIP / Calificado / Descarte), se redacta una respuesta y, solo para leads VIP, un humano aprueba el envío (único punto HITL).
+Entrega final: automatización de extremo a extremo para la gestión de leads de una consultora ficticia (NubeFlow Consulting).
 
-**Stack:** n8n Cloud · Airtable · Anthropic (Claude Haiku 4.5 y Sonnet 5) · Gmail
+Cada consulta que llega por correo (Gmail) o por webhook es analizada con IA. Si es una consulta comercial, se registra como lead en Airtable, se puntúa (VIP / Calificado / Descarte) y se redacta una respuesta. Los leads VIP no reciben respuesta hasta que un gerente la aprueba por correo (Human-in-the-loop). Todo error queda registrado y se alerta al administrador.
+
+**Stack (las 4 categorías exigidas):**
+
+| Categoría | Herramienta |
+|---|---|
+| Orquestador | n8n Cloud |
+| Base de datos (memoria y registro) | Airtable (3 tablas vinculadas) |
+| Procesamiento IA | Anthropic API: Claude Haiku 4.5 (clasificación) y Claude Sonnet 5 (redacción) |
+| Canal de salida | Gmail (con Thread ID) |
+
+## Enlaces obligatorios
+
+- **Dashboard de control (Shared View de Airtable, solo lectura):** https://airtable.com/app3PoaFFyXzghbx2/shr3QtQIQHdjN4MEe
+  Es la vista de solo lectura de la base de datos. Oculta email, teléfono y mensaje de los leads.
+- **JSON del flujo:** [`workflow/ecosistema_leads_vip_v2.json`](workflow/ecosistema_leads_vip_v2.json)
+- **Evidencias (screenshots):** carpeta [`screenshots/`](screenshots/)
+
+## Entregables y criterios de la rúbrica
+
+| # | Criterio (20 % c/u) | Entregable |
+|---|---|---|
+| 1 | Mapa de arquitectura | [`docs/01_diagrama_arquitectura.pdf`](docs/01_diagrama_arquitectura.pdf) y [`docs/01b_componentes_arquitectura.pdf`](docs/01b_componentes_arquitectura.pdf) |
+| 2 | Estructuras de datos documentadas | [`docs/02_manual_de_datos.pdf`](docs/02_manual_de_datos.pdf), [`schemas/airtable_schema.json`](schemas/airtable_schema.json) y [`schemas/integracion_json_schemas.json`](schemas/integracion_json_schemas.json) |
+| 3 | Optimización de costos | [`docs/03_matriz_de_costos.pdf`](docs/03_matriz_de_costos.pdf) (+ [`matriz_costos.csv`](docs/matriz_costos.csv), [`matriz_costos_escenarios.csv`](docs/matriz_costos_escenarios.csv)) |
+| 4 | Seguridad y resiliencia | [`docs/04_seguridad_y_resiliencia.pdf`](docs/04_seguridad_y_resiliencia.pdf) |
+| 5 | Dashboard de control | Shared View de Airtable (enlace arriba) |
+
+## Cómo funciona
+
+1. **Disparo:** un correo nuevo en Gmail (solo mensajes no enviados por la propia cuenta) o un POST al webhook `/webhook/nuevo-lead-vip`.
+2. **Validación y anti-duplicados:** se normalizan los datos, se exigen nombre y email válido y se busca el email en Airtable para no crear leads repetidos.
+3. **Clasificación (Claude Haiku):** puntaje 0–100 con reglas y puntajes acotados. VIP ≥ 80, Calificado ≥ 50, Descarte < 50. Los umbrales viven en el nodo *Config*.
+4. **Rama automática:** los leads no VIP reciben una respuesta estándar.
+5. **Rama VIP con HITL:** Claude Sonnet redacta un borrador y el gerente recibe un correo con los botones *Aprobar y enviar* / *Rechazar*. El flujo espera hasta 48 h; si no hay respuesta, el lead queda como *Expirado*.
+6. **Registro:** cada paso actualiza el campo *Estado* del lead (Pendiente → Procesado_por_IA → Esperando_Aprobacion → Aprobado_por_Humano / Rechazado → Completado) y guarda interacciones con el Thread ID de Gmail.
+
+**Parámetros dinámicos (sin datos hardcodeados):** el nodo *Config: Parametros del Sistema* concentra correos del aprobador y del administrador, modelos, `max_tokens`, umbrales de score, tamaños de empresa y horas de espera. Los prompts usan variables del lead y de esa configuración.
+
+**Filtro anti-bucle:** se excluyen los correos propios (`-from:me`) y los asuntos generados por el sistema (por ejemplo "Aprobacion requerida"), tanto en la consulta del trigger como en un nodo IF.
+
+**Resiliencia:** cada fallo (API de IA, formato de respuesta, Airtable, Gmail, datos faltantes) pasa por un punto único de manejo que guarda una fila en la tabla *Errores*, marca el lead con `Error_API` cuando corresponde y alerta al administrador por correo.
 
 ## Estructura del repositorio
 
@@ -11,53 +52,38 @@ README.md
 workflow/ecosistema_leads_vip_v2.json     Workflow n8n (49 nodos, credenciales sanitizadas)
 schemas/airtable_schema.json              Esquema de la base (tablas, campos, estados)
 schemas/integracion_json_schemas.json     JSON Schemas de las integraciones
-docs/01_diagrama_arquitectura.pdf         Entregable 1
-docs/01b_componentes_arquitectura.pdf     Componentes, flujo de estados, Thread ID
-docs/02_manual_de_datos.pdf               Entregable 2
-docs/03_matriz_de_costos.pdf              Entregable 3 (+ CSV)
-docs/04_seguridad_y_resiliencia.pdf       Entregable 4
+docs/                                     PDFs de los entregables 1 a 4 y matrices de costos (CSV)
 tests/plan_pruebas.md, casos_prueba.json  Prueba de estrés (9 casos)
-screenshots/                              (a completar por el autor)
+screenshots/                              Evidencias del flujo, la base y el dashboard
 ```
+
+## Prueba de estrés
+
+Se ejecutaron 9 casos, incluidos caminos infelices. Detalle en [`tests/plan_pruebas.md`](tests/plan_pruebas.md).
+
+| Caso | Resultado |
+|---|---|
+| T1 Correo real, lead Calificado | OK |
+| T2 VIP aprobado por el gerente (HITL) | OK |
+| T3 VIP rechazado por el gerente | OK |
+| T4 Aprobación expirada | OK (verificado con la espera acortada temporalmente; el valor de producción es 48 h) |
+| T5 Datos faltantes (webhook sin email) | OK (ejecución con datos fijados) |
+| T6 Correo no comercial | OK (ejecución con datos fijados; descartado) |
+| T7 Falla de la API de IA (401) | OK (error registrado y alerta) |
+| T8 Lead duplicado | OK (una sola fila) |
+| T9 Prompt injection | OK (score 5, Descarte) |
 
 ## Puesta en marcha
 
 1. Importa `workflow/ecosistema_leads_vip_v2.json` en n8n (Workflows → Import from file).
-2. Crea/asigna credenciales: Gmail OAuth2, Airtable, y Anthropic como *Header Auth* (**Name** = `x-api-key`, **Value** = tu API key).
-3. En el nodo **Config** cambia `aprobador_email` y `admin_email` (están como `CAMBIAR@tu-empresa.com`).
-4. Crea la base de Airtable según `schemas/airtable_schema.json` y actualiza los IDs de base/tablas en los nodos Airtable.
+2. Crea o asigna las credenciales: Gmail OAuth2, Airtable y Anthropic como *Header Auth* (**Name** = `x-api-key`, **Value** = la API key).
+3. En el nodo **Config** cambia `aprobador_email` y `admin_email`.
+4. Crea la base de Airtable según `schemas/airtable_schema.json` y actualiza los IDs de base y tablas en los nodos Airtable.
 5. Publica el workflow y envía un correo de prueba.
 
-## Checklist de entregables (20 % cada uno)
+## Notas técnicas
 
-| # | Entregable | Estado |
-|---|---|---|
-| 1 | Diagrama de arquitectura (PDF) | Listo: `docs/01_*.pdf` |
-| 2 | Manual de datos (esquema Airtable + JSON Schemas) | Listo: `docs/02_*.pdf` + `schemas/` |
-| 3 | Matriz de costos por modelo y tarea | Listo: `docs/03_*.pdf` |
-| 4 | Seguridad y resiliencia | Listo: `docs/04_*.pdf` |
-| 5 | Dashboard público con KPIs y tasa de error | Listo: vista pública de solo lectura de Airtable (sin email, teléfono ni mensaje): https://airtable.com/app3PoaFFyXzghbx2/shr3QtQIQHdjN4MEe . La Interface con KPIs agregados existe en la base, pero publicarla requiere plan Team |
-
-## Pendiente por el autor
-
-- Hecho: enlace público del dashboard (vista de solo lectura): https://airtable.com/app3PoaFFyXzghbx2/shr3QtQIQHdjN4MEe
-- Tomar capturas (workflow, ejecuciones, Airtable, dashboard) en `screenshots/`.
-- Verificar T4 (aprobación expirada), que requiere esperar 48 h. T2, T3, T8 y T9 ya fueron verificados con datos reales.
-- Grabar el video de 3 minutos.
-
-## Guion del video (3 min, sin mostrar credenciales)
-
-1. 0:00–0:30 Problema y arquitectura (diagrama).
-2. 0:30–1:15 Enviar un correo real y ver la ejecución en n8n.
-3. 1:15–2:00 Fila creada en Airtable; punto HITL con correo de aprobación.
-4. 2:00–2:30 Camino infeliz: error registrado y alerta al admin.
-5. 2:30–3:00 Dashboard público, costos y cierre.
-Oculta las credenciales de n8n y las API keys antes de grabar.
-
-## Limitaciones conocidas
-
-- No hay workflow global de errores (Error Trigger); los errores se manejan por nodo.
-- Los tokens/costo se registran solo para el scoring (T2); T1 y T3 son estimaciones en la matriz de costos.
-- Fuente del lead por correo queda como "Otro" (el select no tiene opción "Correo").
-- Solo T4 (expiración a 48 h) sigue sin verificar. En v2 se corrigió que Sonnet 5 rechaza temperature y devuelve un bloque thinking antes del texto.
-- Tarifas de Anthropic consultadas el 21-sep-2026; verifícalas antes de entregar.
+- Claude Sonnet 5 no acepta el parámetro `temperature` y su respuesta incluye un bloque `thinking` antes del bloque de texto; el flujo ya lo contempla (se lee el primer bloque de tipo `text`).
+- No hay un workflow global de errores con Error Trigger; los errores se manejan por nodo y convergen en un punto único.
+- Los tokens y el costo real se registran en la clasificación; los costos de redacción se estiman en la matriz de costos.
+- Las tarifas de Anthropic de la matriz corresponden al 21-sep-2026.
