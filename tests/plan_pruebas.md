@@ -5,14 +5,14 @@ Fuente de verdad: `casos_prueba.json`. Requisito del proyecto: 5 o más corridas
 | ID | Caso | Estado | Evidencia |
 |---|---|---|---|
 | T1 | Correo real, lead Calificado | OK | Ejecución 15 |
-| T2 | VIP aprobado (HITL) | MOCK | Ejecuciones 2 y 4 |
-| T3 | VIP rechazado | PENDIENTE | |
+| T2 | VIP aprobado (HITL) | OK | Aprobacion real por Gmail (Test VIP Aprobado 4): Completado, Decision_Humana=Aprobado |
+| T3 | VIP rechazado | OK | Rechazo real por Gmail (Test VIP Rechazado 4): Decision_Humana=Rechazado |
 | T4 | Aprobación expirada | PENDIENTE | Acortar `horas_espera_aprobacion` |
 | T5 | Datos faltantes (webhook) | MOCK | Ejecución 3 |
 | T6 | Correo irrelevante | MOCK | Ejecución 5 |
 | T7 | Falla de API Claude (401) | OK | Ejecuciones 8–14 y 6 |
-| T8 | Duplicado | PENDIENTE | |
-| T9 | Prompt injection | PENDIENTE | |
+| T8 | Duplicado | OK | Mismo email dos veces: una sola fila en Airtable |
+| T9 | Prompt injection | OK | Score 5, categoria Descarte |
 
 ## Cómo correr los pendientes
 
