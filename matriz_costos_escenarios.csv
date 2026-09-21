@@ -1,5 +1,0 @@
-escenario,usd_mes_100_correos,usd_mes_500_correos,usd_mes_1000_correos,usd_mes_5000_correos,usd_por_lead_relevante
-A. Diseno actual (Haiku filtro/scoring + Sonnet borrador),0.22,1.10,2.20,10.99,0.0073
-B. Todo Haiku 4.5,0.21,1.05,2.11,10.54,0.0070
-C. Todo Sonnet 5,0.42,2.11,4.22,21.08,0.0141
-D. Todo Opus 5,1.05,5.27,10.54,52.69,0.0351
