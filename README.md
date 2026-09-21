@@ -15,8 +15,8 @@ Cada consulta que llega por correo (Gmail) o por webhook es analizada con IA. Si
 
 ## Enlaces obligatorios
 
-- **Dashboard de control (Shared View de Airtable, solo lectura):** https://airtable.com/app3PoaFFyXzghbx2/shr3QtQIQHdjN4MEe
-  Es la vista de solo lectura de la base de datos. Oculta email, teléfono y mensaje de los leads.
+- **Dashboard de control (Shared View de Airtable, solo lectura):** https://airtable.com/app3PoaFFyXzghbx2/shrD1YBckiE15GRWT
+  Enlace de solo lectura a la base de datos completa (tablas Leads, Errores e Interacciones). Los datos de los leads son ficticios, de demostración.
 - **JSON del flujo:** [`workflow/ecosistema_leads_vip_v2.json`](workflow/ecosistema_leads_vip_v2.json)
 - **Evidencias (screenshots):** carpeta [`screenshots/`](screenshots/)
 
