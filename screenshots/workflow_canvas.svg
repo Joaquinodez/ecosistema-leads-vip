@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5402 1968" font-family="Arial" font-size="11">
+<rect width="100%" height="100%" fill="#fafafa"/>
+<text x="10" y="22" font-size="16" font-weight="bold">Workflow n8n: Clasificación IA de Leads VIP - NubeFlow v2 (49 nodos) - mapa generado del JSON exportado</text>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0L8,4L0,8z" fill="#888"/></marker></defs>
+<path d="M210,1071C250,1071 204,1071 244,1071" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M658,1071C698,1071 652,1071 692,1071" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M882,1071C922,1071 876,975 916,975" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M882,1071C922,1071 876,1263 916,1263" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M1106,975C1146,975 1100,975 1140,975" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M1330,975C1370,975 1324,879 1364,879" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M1330,975C1370,975 1324,1071 1364,1071" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M1554,1071C1594,1071 1548,975 1588,975" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M1554,1071C1594,1071 1548,1167 1588,1167" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M1778,975C1818,975 1772,879 1812,879" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M1778,975C1818,975 4236,1519 4276,1519" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M2002,879C2042,879 1996,607 2036,607" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M2002,879C2042,879 4236,1327 4276,1327" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M2226,607C2266,607 2220,607 2260,607" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M2450,607C2490,607 2444,607 2484,607" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M2450,607C2490,607 4012,1167 4052,1167" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M2674,607C2714,607 2668,607 2708,607" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M2898,607C2938,607 2892,559 2932,559" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M2898,607C2938,607 4236,943 4276,943" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M3122,559C3162,559 3116,479 3156,479" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M3122,559C3162,559 4236,751 4276,751" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M3346,479C3386,479 3340,479 3380,479" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M3570,479C3610,479 3564,463 3604,463" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M3794,463C3834,463 3788,191 3828,191" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M3794,463C3834,463 3788,383 3828,383" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M3794,463C3834,463 3788,575 3828,575" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M4018,191C4058,191 4012,191 4052,191" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M4242,191C4282,191 4236,95 4276,95" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M4242,191C4282,191 4236,559 4276,559" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M4466,95C4506,95 4460,95 4500,95" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M4466,559C4506,559 4460,1039 4500,1039" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M4466,943C4506,943 4460,1039 4500,1039" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M4466,751C4506,751 4460,1039 4500,1039" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M4242,1167C4282,1167 4236,1135 4276,1135" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M4242,1167C4282,1167 4236,559 4276,559" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M4466,1135C4506,1135 4460,1423 4500,1423" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M4466,1519C4506,1519 4460,1039 4500,1039" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M4466,1327C4506,1327 4460,1039 4500,1039" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M1106,1263C1146,1263 1100,1263 1140,1263" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M1330,1263C1370,1263 1324,1263 1364,1263" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M4690,1039C4730,1039 4684,1039 4724,1039" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M4914,1039C4954,1039 4908,1039 4948,1039" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M5138,1039C5178,1039 5132,1039 5172,1039" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M210,1807C250,1807 204,1071 244,1071" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M434,1071C474,1071 428,1807 468,1807" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M658,1807C698,1807 652,1807 692,1807" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M658,1807C698,1807 428,1071 468,1071" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M882,1807C922,1807 876,1807 916,1807" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M1106,1807C1146,1807 1100,1807 1140,1807" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M1330,1807C1370,1807 1324,1807 1364,1807" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M1554,1807C1594,1807 428,1071 468,1071" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M1554,1807C1594,1807 1548,1903 1588,1903" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<path d="M1778,1903C1818,1903 1772,1903 1812,1903" fill="none" stroke="#999" stroke-width="1" marker-end="url(#a)"/>
+<rect x="20" y="1036" width="190" height="70" rx="6" fill="#2e7d32"/>
+<text x="115" y="1068.5" fill="#fff" text-anchor="middle" font-weight="bold">Trigger: Nuevo Lead</text>
+<text x="115" y="1081.5" fill="#fff" text-anchor="middle" font-weight="bold">(Webhook)</text>
+<rect x="244" y="1036" width="190" height="70" rx="6" fill="#607d8b"/>
+<text x="339" y="1068.5" fill="#fff" text-anchor="middle" font-weight="bold">Config: Parametros del</text>
+<text x="339" y="1081.5" fill="#fff" text-anchor="middle" font-weight="bold">Sistema</text>
+<rect x="468" y="1036" width="190" height="70" rx="6" fill="#607d8b"/>
+<text x="563" y="1068.5" fill="#fff" text-anchor="middle" font-weight="bold">Normalizar y Validar</text>
+<text x="563" y="1081.5" fill="#fff" text-anchor="middle" font-weight="bold">Lead</text>
+<rect x="692" y="1036" width="190" height="70" rx="6" fill="#ef6c00"/>
+<text x="787" y="1068.5" fill="#fff" text-anchor="middle" font-weight="bold">¿Datos Completos?</text>
+<text x="787" y="1081.5" fill="#fff" text-anchor="middle" font-weight="bold">(Nombre y Email validos)</text>
+<rect x="916" y="940" width="190" height="70" rx="6" fill="#1565c0"/>
+<text x="1011" y="972.5" fill="#fff" text-anchor="middle" font-weight="bold">Buscar Lead Existente</text>
+<text x="1011" y="985.5" fill="#fff" text-anchor="middle" font-weight="bold">(anti-duplicados)</text>
+<rect x="1140" y="940" width="190" height="70" rx="6" fill="#ef6c00"/>
+<text x="1235" y="972.5" fill="#fff" text-anchor="middle" font-weight="bold">¿Lead Ya Existe? (por</text>
+<text x="1235" y="985.5" fill="#fff" text-anchor="middle" font-weight="bold">Email)</text>
+<rect x="1364" y="844" width="190" height="70" rx="6" fill="#1565c0"/>
+<text x="1459" y="870" fill="#fff" text-anchor="middle" font-weight="bold">Registrar Reingreso</text>
+<text x="1459" y="883" fill="#fff" text-anchor="middle" font-weight="bold">Duplicado (sin</text>
+<text x="1459" y="896" fill="#fff" text-anchor="middle" font-weight="bold">reprocesar)</text>
+<rect x="1364" y="1036" width="190" height="70" rx="6" fill="#1565c0"/>
+<text x="1459" y="1068.5" fill="#fff" text-anchor="middle" font-weight="bold">Crear Lead</text>
+<text x="1459" y="1081.5" fill="#fff" text-anchor="middle" font-weight="bold">(Estado=Pendiente)</text>
+<rect x="1588" y="940" width="190" height="70" rx="6" fill="#6a1b9a"/>
+<text x="1683" y="972.5" fill="#fff" text-anchor="middle" font-weight="bold">Clasificar Lead (Claude</text>
+<text x="1683" y="985.5" fill="#fff" text-anchor="middle" font-weight="bold">Haiku)</text>
+<rect x="1812" y="844" width="190" height="70" rx="6" fill="#455a64"/>
+<text x="1907" y="876.5" fill="#fff" text-anchor="middle" font-weight="bold">Parsear y Validar</text>
+<text x="1907" y="889.5" fill="#fff" text-anchor="middle" font-weight="bold">Respuesta IA</text>
+<rect x="2036" y="572" width="190" height="70" rx="6" fill="#1565c0"/>
+<text x="2131" y="604.5" fill="#fff" text-anchor="middle" font-weight="bold">Guardar Clasificacion</text>
+<text x="2131" y="617.5" fill="#fff" text-anchor="middle" font-weight="bold">(Estado=Procesado_por_IA)</text>
+<rect x="2260" y="572" width="190" height="70" rx="6" fill="#ef6c00"/>
+<text x="2355" y="604.5" fill="#fff" text-anchor="middle" font-weight="bold">¿Es VIP? (score &gt;=</text>
+<text x="2355" y="617.5" fill="#fff" text-anchor="middle" font-weight="bold">umbral)</text>
+<rect x="2484" y="572" width="190" height="70" rx="6" fill="#1565c0"/>
+<text x="2579" y="604.5" fill="#fff" text-anchor="middle" font-weight="bold">Estado:</text>
+<text x="2579" y="617.5" fill="#fff" text-anchor="middle" font-weight="bold">Esperando_Aprobacion</text>
+<rect x="2708" y="572" width="190" height="70" rx="6" fill="#6a1b9a"/>
+<text x="2803" y="604.5" fill="#fff" text-anchor="middle" font-weight="bold">Redactar Borrador de</text>
+<text x="2803" y="617.5" fill="#fff" text-anchor="middle" font-weight="bold">Email (Claude Sonnet)</text>
+<rect x="2932" y="524" width="190" height="70" rx="6" fill="#455a64"/>
+<text x="3027" y="556.5" fill="#fff" text-anchor="middle" font-weight="bold">Parsear Borrador de</text>
+<text x="3027" y="569.5" fill="#fff" text-anchor="middle" font-weight="bold">Email</text>
+<rect x="3156" y="444" width="190" height="70" rx="6" fill="#1565c0"/>
+<text x="3251" y="476.5" fill="#fff" text-anchor="middle" font-weight="bold">Log Interaccion:</text>
+<text x="3251" y="489.5" fill="#fff" text-anchor="middle" font-weight="bold">Solicitud de Aprobacion</text>
+<rect x="3380" y="444" width="190" height="70" rx="6" fill="#f9a825"/>
+<text x="3475" y="470" fill="#fff" text-anchor="middle" font-weight="bold">HITL: Aprobacion del</text>
+<text x="3475" y="483" fill="#fff" text-anchor="middle" font-weight="bold">Gerente (Gmail Send &amp;</text>
+<text x="3475" y="496" fill="#fff" text-anchor="middle" font-weight="bold">Wait)</text>
+<rect x="3604" y="428" width="190" height="70" rx="6" fill="#607d8b"/>
+<text x="3699" y="467" fill="#fff" text-anchor="middle" font-weight="bold">Decision del Gerente</text>
+<rect x="3828" y="156" width="190" height="70" rx="6" fill="#1565c0"/>
+<text x="3923" y="188.5" fill="#fff" text-anchor="middle" font-weight="bold">Estado:</text>
+<text x="3923" y="201.5" fill="#fff" text-anchor="middle" font-weight="bold">Aprobado_por_Humano</text>
+<rect x="4052" y="156" width="190" height="70" rx="6" fill="#c62828"/>
+<text x="4147" y="188.5" fill="#fff" text-anchor="middle" font-weight="bold">Gmail: Enviar Email al</text>
+<text x="4147" y="201.5" fill="#fff" text-anchor="middle" font-weight="bold">Lead VIP</text>
+<rect x="4276" y="60" width="190" height="70" rx="6" fill="#1565c0"/>
+<text x="4371" y="92.5" fill="#fff" text-anchor="middle" font-weight="bold">Log Interaccion: Email</text>
+<text x="4371" y="105.5" fill="#fff" text-anchor="middle" font-weight="bold">Cliente VIP</text>
+<rect x="4500" y="60" width="190" height="70" rx="6" fill="#1565c0"/>
+<text x="4595" y="99" fill="#fff" text-anchor="middle" font-weight="bold">Estado: Completado (VIP)</text>
+<rect x="4276" y="524" width="190" height="70" rx="6" fill="#607d8b"/>
+<text x="4371" y="556.5" fill="#fff" text-anchor="middle" font-weight="bold">Preparar Error: Falla</text>
+<text x="4371" y="569.5" fill="#fff" text-anchor="middle" font-weight="bold">Envio Gmail</text>
+<rect x="3828" y="348" width="190" height="70" rx="6" fill="#1565c0"/>
+<text x="3923" y="380.5" fill="#fff" text-anchor="middle" font-weight="bold">Estado: Rechazado por el</text>
+<text x="3923" y="393.5" fill="#fff" text-anchor="middle" font-weight="bold">Gerente</text>
+<rect x="3828" y="540" width="190" height="70" rx="6" fill="#1565c0"/>
+<text x="3923" y="566" fill="#fff" text-anchor="middle" font-weight="bold">Estado: Rechazado por</text>
+<text x="3923" y="579" fill="#fff" text-anchor="middle" font-weight="bold">Falta de Respuesta</text>
+<text x="3923" y="592" fill="#fff" text-anchor="middle" font-weight="bold">(Expirado)</text>
+<rect x="4276" y="908" width="190" height="70" rx="6" fill="#607d8b"/>
+<text x="4371" y="940.5" fill="#fff" text-anchor="middle" font-weight="bold">Preparar Error: Falla</text>
+<text x="4371" y="953.5" fill="#fff" text-anchor="middle" font-weight="bold">API Redaccion</text>
+<rect x="4276" y="716" width="190" height="70" rx="6" fill="#607d8b"/>
+<text x="4371" y="748.5" fill="#fff" text-anchor="middle" font-weight="bold">Preparar Error: Formato</text>
+<text x="4371" y="761.5" fill="#fff" text-anchor="middle" font-weight="bold">Borrador de Email</text>
+<rect x="4052" y="1132" width="190" height="70" rx="6" fill="#c62828"/>
+<text x="4147" y="1164.5" fill="#fff" text-anchor="middle" font-weight="bold">Gmail: Respuesta</text>
+<text x="4147" y="1177.5" fill="#fff" text-anchor="middle" font-weight="bold">Estandar (no VIP)</text>
+<rect x="4276" y="1100" width="190" height="70" rx="6" fill="#1565c0"/>
+<text x="4371" y="1132.5" fill="#fff" text-anchor="middle" font-weight="bold">Log Interaccion:</text>
+<text x="4371" y="1145.5" fill="#fff" text-anchor="middle" font-weight="bold">Respuesta Estandar</text>
+<rect x="4500" y="1388" width="190" height="70" rx="6" fill="#1565c0"/>
+<text x="4595" y="1420.5" fill="#fff" text-anchor="middle" font-weight="bold">Estado: Completado</text>
+<text x="4595" y="1433.5" fill="#fff" text-anchor="middle" font-weight="bold">(Automatico, sin HITL)</text>
+<rect x="1588" y="1132" width="190" height="70" rx="6" fill="#c62828"/>
+<text x="1683" y="1164.5" fill="#fff" text-anchor="middle" font-weight="bold">Alertar Admin: Falla al</text>
+<text x="1683" y="1177.5" fill="#fff" text-anchor="middle" font-weight="bold">Crear Lead en Airtable</text>
+<rect x="4276" y="1484" width="190" height="70" rx="6" fill="#607d8b"/>
+<text x="4371" y="1516.5" fill="#fff" text-anchor="middle" font-weight="bold">Preparar Error: Falla</text>
+<text x="4371" y="1529.5" fill="#fff" text-anchor="middle" font-weight="bold">API Clasificacion</text>
+<rect x="4276" y="1292" width="190" height="70" rx="6" fill="#607d8b"/>
+<text x="4371" y="1324.5" fill="#fff" text-anchor="middle" font-weight="bold">Preparar Error: Formato</text>
+<text x="4371" y="1337.5" fill="#fff" text-anchor="middle" font-weight="bold">Respuesta Clasificacion</text>
+<rect x="916" y="1228" width="190" height="70" rx="6" fill="#607d8b"/>
+<text x="1011" y="1260.5" fill="#fff" text-anchor="middle" font-weight="bold">Preparar Error: Datos</text>
+<text x="1011" y="1273.5" fill="#fff" text-anchor="middle" font-weight="bold">Faltantes</text>
+<rect x="1140" y="1228" width="190" height="70" rx="6" fill="#1565c0"/>
+<text x="1235" y="1260.5" fill="#fff" text-anchor="middle" font-weight="bold">Log Error: Datos</text>
+<text x="1235" y="1273.5" fill="#fff" text-anchor="middle" font-weight="bold">Faltantes</text>
+<rect x="1364" y="1228" width="190" height="70" rx="6" fill="#c62828"/>
+<text x="1459" y="1260.5" fill="#fff" text-anchor="middle" font-weight="bold">Alertar Admin: Datos</text>
+<text x="1459" y="1273.5" fill="#fff" text-anchor="middle" font-weight="bold">Faltantes</text>
+<rect x="4500" y="1004" width="190" height="70" rx="6" fill="#607d8b"/>
+<text x="4595" y="1036.5" fill="#fff" text-anchor="middle" font-weight="bold">Consolidar Error (punto</text>
+<text x="4595" y="1049.5" fill="#fff" text-anchor="middle" font-weight="bold">unico de manejo)</text>
+<rect x="4724" y="1004" width="190" height="70" rx="6" fill="#1565c0"/>
+<text x="4819" y="1036.5" fill="#fff" text-anchor="middle" font-weight="bold">Log Error en Airtable</text>
+<text x="4819" y="1049.5" fill="#fff" text-anchor="middle" font-weight="bold">(tabla Errores)</text>
+<rect x="4948" y="1004" width="190" height="70" rx="6" fill="#1565c0"/>
+<text x="5043" y="1036.5" fill="#fff" text-anchor="middle" font-weight="bold">Marcar Lead:</text>
+<text x="5043" y="1049.5" fill="#fff" text-anchor="middle" font-weight="bold">Estado=Error_API</text>
+<rect x="5172" y="1004" width="190" height="70" rx="6" fill="#c62828"/>
+<text x="5267" y="1036.5" fill="#fff" text-anchor="middle" font-weight="bold">Alertar Admin: Falla del</text>
+<text x="5267" y="1049.5" fill="#fff" text-anchor="middle" font-weight="bold">Flujo</text>
+<rect x="20" y="1772" width="190" height="70" rx="6" fill="#2e7d32"/>
+<text x="115" y="1804.5" fill="#fff" text-anchor="middle" font-weight="bold">Trigger: Correo Nuevo</text>
+<text x="115" y="1817.5" fill="#fff" text-anchor="middle" font-weight="bold">(Gmail)</text>
+<rect x="468" y="1772" width="190" height="70" rx="6" fill="#ef6c00"/>
+<text x="563" y="1804.5" fill="#fff" text-anchor="middle" font-weight="bold">¿Llego por Correo? (vs</text>
+<text x="563" y="1817.5" fill="#fff" text-anchor="middle" font-weight="bold">Webhook)</text>
+<rect x="692" y="1772" width="190" height="70" rx="6" fill="#ef6c00"/>
+<text x="787" y="1798" fill="#fff" text-anchor="middle" font-weight="bold">Filtro Anti-Bucle</text>
+<text x="787" y="1811" fill="#fff" text-anchor="middle" font-weight="bold">(ignora correos del</text>
+<text x="787" y="1824" fill="#fff" text-anchor="middle" font-weight="bold">sistema)</text>
+<rect x="916" y="1772" width="190" height="70" rx="6" fill="#6a1b9a"/>
+<text x="1011" y="1798" fill="#fff" text-anchor="middle" font-weight="bold">Clasificar Relevancia y</text>
+<text x="1011" y="1811" fill="#fff" text-anchor="middle" font-weight="bold">Extraer Datos (Claude</text>
+<text x="1011" y="1824" fill="#fff" text-anchor="middle" font-weight="bold">Haiku)</text>
+<rect x="1140" y="1772" width="190" height="70" rx="6" fill="#455a64"/>
+<text x="1235" y="1804.5" fill="#fff" text-anchor="middle" font-weight="bold">Estructurar Lead desde</text>
+<text x="1235" y="1817.5" fill="#fff" text-anchor="middle" font-weight="bold">Correo</text>
+<rect x="1364" y="1772" width="190" height="70" rx="6" fill="#ef6c00"/>
+<text x="1459" y="1804.5" fill="#fff" text-anchor="middle" font-weight="bold">¿Es Consulta Relevante?</text>
+<text x="1459" y="1817.5" fill="#fff" text-anchor="middle" font-weight="bold">(segun la IA)</text>
+<rect x="1588" y="1868" width="190" height="70" rx="6" fill="#ef6c00"/>
+<text x="1683" y="1894" fill="#fff" text-anchor="middle" font-weight="bold">¿Fallo la Clasificacion?</text>
+<text x="1683" y="1907" fill="#fff" text-anchor="middle" font-weight="bold">(no descartar en</text>
+<text x="1683" y="1920" fill="#fff" text-anchor="middle" font-weight="bold">silencio)</text>
+<rect x="1812" y="1868" width="190" height="70" rx="6" fill="#c62828"/>
+<text x="1907" y="1900.5" fill="#fff" text-anchor="middle" font-weight="bold">Alertar Admin: Correo No</text>
+<text x="1907" y="1913.5" fill="#fff" text-anchor="middle" font-weight="bold">Clasificado</text>
+</svg>
