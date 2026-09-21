@@ -36,13 +36,13 @@ screenshots/                              (a completar por el autor)
 | 2 | Manual de datos (esquema Airtable + JSON Schemas) | Listo: `docs/02_*.pdf` + `schemas/` |
 | 3 | Matriz de costos por modelo y tarea | Listo: `docs/03_*.pdf` |
 | 4 | Seguridad y resiliencia | Listo: `docs/04_*.pdf` |
-| 5 | Dashboard público con KPIs y tasa de error | Construido en Airtable Interface; **falta crear el enlace público (Share) y capturar pantalla** |
+| 5 | Dashboard público con KPIs y tasa de error | Listo: vista pública de solo lectura de Airtable (sin email, teléfono ni mensaje): https://airtable.com/app3PoaFFyXzghbx2/shr3QtQIQHdjN4MEe . La Interface con KPIs agregados existe en la base, pero publicarla requiere plan Team |
 
 ## Pendiente por el autor
 
-- Compartir la Interface de Airtable con enlace de solo lectura y pegarlo aquí: `LINK_DASHBOARD_PENDIENTE`.
+- Hecho: enlace público del dashboard (vista de solo lectura): https://airtable.com/app3PoaFFyXzghbx2/shr3QtQIQHdjN4MEe
 - Tomar capturas (workflow, ejecuciones, Airtable, dashboard) en `screenshots/`.
-- Correr los casos PENDIENTES de `tests/casos_prueba.json` (VIP real, rechazo, expiración, duplicado, inyección).
+- Verificar T4 (aprobación expirada), que requiere esperar 48 h. T2, T3, T8 y T9 ya fueron verificados con datos reales.
 - Grabar el video de 3 minutos.
 
 ## Guion del video (3 min, sin mostrar credenciales)
@@ -59,5 +59,5 @@ Oculta las credenciales de n8n y las API keys antes de grabar.
 - No hay workflow global de errores (Error Trigger); los errores se manejan por nodo.
 - Los tokens/costo se registran solo para el scoring (T2); T1 y T3 son estimaciones en la matriz de costos.
 - Fuente del lead por correo queda como "Otro" (el select no tiene opción "Correo").
-- Los casos T3, T4, T8 y T9 no se han verificado con datos reales.
+- Solo T4 (expiración a 48 h) sigue sin verificar. En v2 se corrigió que Sonnet 5 rechaza temperature y devuelve un bloque thinking antes del texto.
 - Tarifas de Anthropic consultadas el 21-sep-2026; verifícalas antes de entregar.
